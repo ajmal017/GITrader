@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>GITrader</display-name>
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  	<welcome-file>inicio.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>TIPO</param-name>
+    <param-value>mysql</param-value>
+  </context-param>
+  <context-param>
+    <param-name>SERVIDOR</param-name>
+    <param-value>localhost</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PUERTO</param-name>
+    <param-value>3306</param-value>
+  </context-param>
+  <context-param>
+    <param-name>LOGIN</param-name>
+    <param-value>root10203040</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PASSWORD</param-name>
+    <param-value>10203040</param-value>
+  </context-param>
+  <context-param>
+    <param-name>BBDD</param-name>
+    <param-value>tradermodel2</param-value>
+  </context-param>
+  <context-param>
+    <param-name>IDLETIMEOUT</param-name>
+    <param-value>20</param-value>
+  </context-param>
+  <context-param>
+    <param-name>CHECKOUTTIMEOUT</param-name>
+    <param-value>10</param-value>
+  </context-param>
+  <context-param>
+    <param-name>MAXIMO</param-name>
+    <param-value>3</param-value>
+  </context-param>
+   <servlet><!-- - NECESARIO PARA ACTIVAR. -->
+ 		<servlet-name>QuartzInitializer</servlet-name>
+ 		<servlet-class>
+ 			com.tim.jobs.JobsListener_Quartz
+       </servlet-class>      
+       <init-param>
+         <param-name>shutdown-on-unload</param-name>
+         <param-value>true</param-value>
+     </init-param>
+     <init-param>
+         <param-name>wait-on-shutdown</param-name>
+         <param-value>true</param-value>
+     </init-param>
+     <init-param>
+         <param-name>start-scheduler-on-load</param-name>
+         <param-value>true</param-value>
+     </init-param>
+      <load-on-startup>1</load-on-startup>
+   
+    </servlet> 
+     
+</web-app>

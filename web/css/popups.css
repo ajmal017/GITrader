@@ -1,0 +1,11 @@
+#wrapper {
+/* background: url(/npatheme-theme/images/custom/cabecera_es.jpg) center top no-repeat; */
+width: 100%;
+margin:0;
+}
+.lista_acciones_trading {width: 81%;}
+
+.tmarket tr td div select {float : left;}
+.navigation {display:none;}
+body {background :none;}
+.tmarket .disabled  {background-color:#ededed !important;}
